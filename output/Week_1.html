@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='../site_testing/reveal.js/lib/css/reveal.css' rel='stylesheet'>
-    <link href='../site_testing/reveal.js/lib/css/theme/white.css' rel='stylesheet'>
+    <link href='../../site_testing/reveal.js/css/reveal.css' rel='stylesheet' type='text/css'>
+    <link href='../../site_testing/slide_types.css' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class='reveal'>
       <div class='slides'>
-        <h1>header</h1>
-        <span>header</span>
-        <span>header</span>
-        <span>type</span>
-        <span>type</span>
-        <span>contents</span>
-        <span>["C1, C2"]</span>
-        <span>teacher_notes</span>
-        <span>["TN1, TN2"]</span>
+        <section>
+          <div class='header'>header</div>
+          <div class='content vertical'>
+            <div>C1</div>
+            <div>C2</div>
+          </div>
+        </section>
       </div>
     </div>
   </body>
-  <script src='../site_testing/reveal.js/lib/js/head.min.js'></script>
-  <script src='../site_testing/reveal.js/lib/js/head.min.js'></script>
+  <script src='../../site_testing/reveal.js/lib/js/head.min.js'></script>
+  <script src='../../site_testing/reveal.js/js/reveal.js'></script>
 </html>
+<script>
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      { src: '../../site_testing/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../../site_testing/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../site_testing/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../../site_testing/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../../site_testing/reveal.js/plugin/zoom-js/zoom.js', async: true },
+      { src: '../../site_testing/reveal.js/plugin/notes/notes.js', async: true }
+      ]
+    });
+</script>

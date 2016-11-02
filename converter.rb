@@ -2,6 +2,11 @@ require 'nokogiri'
 require 'haml'
 require 'pry'
 
+ROOT_DIR = '../../'
+CONVERTER_DIR = File.join(ROOT_DIR, 'mind_map_converter')
+SITE_TESTING_DIR = File.join(ROOT_DIR, 'site_testing')
+REVEAL_JS_DIR = File.join(SITE_TESTING_DIR, 'reveal.js')
+
 # http://stackoverflow.com/questions/6125265/using-layouts-in-haml-files-independently-of-rails
 module HamlSupport
   LAYOUT_FILE = 'views/base/layout.html.haml'
@@ -22,6 +27,10 @@ module HamlSupport
     File.open("./output/#{output_file || page}.html", 'w+') do |f|
       f.write(rendered_html)
     end
+  end
+
+  def self.render_object
+    Object.new
   end
 end
 
@@ -72,7 +81,7 @@ class SlideDeck < Struct.new(:path)
   end
 
   def render
-    @slide_objects << Slide.new('header', 'type', ['C1, C2'], ['TN1, TN2'])
+    @slide_objects << Slide.new('header', 'msch', ['C1', 'C2'], ['TN1', 'TN2'])
 
     # render a file that loops through the slide decks and renders each file
     HamlSupport.render(TEMPLATE, { slides: @slide_objects })
@@ -85,7 +94,7 @@ class SlideDeck < Struct.new(:path)
 end
 
 class Slide < Struct.new(:header, :type, :contents, :teacher_notes)
-  TEMPLATE = 'views/slide_templates/_ssc_slide.html.haml'
+  SUPPORTED_TYPES = ['ssc', 'mscv', 'msch']
 
   def initialize(*args)
     super
@@ -94,7 +103,13 @@ class Slide < Struct.new(:header, :type, :contents, :teacher_notes)
   end
 
   def render
-    HamlSupport.render(TEMPLATE, slide: self)
+    HamlSupport.render(slide_template, slide: self)
+  end
+
+  def slide_template
+    raise StandardError.new("Type: #{type} is not supported") unless SUPPORTED_TYPES.include?(type)
+
+    "views/slide_templates/_#{type.downcase}_slide.html.haml"
   end
 end
 

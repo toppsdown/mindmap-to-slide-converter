@@ -1,3 +1,11 @@
-%section
-  .header=slide.header
-  .content=slide.contents
+%section.main-section
+  %section
+    .header=slide.header
+    .content
+      %pre= slide.contents.first
+  %section
+    .header="#{slide.header}: Teacher Notes"
+    .content
+      - slide.teacher_notes.each do |tn|
+        %pre=tn
+

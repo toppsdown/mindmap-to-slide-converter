@@ -1,0 +1,67 @@
+<html>
+<head>
+  <link rel="stylesheet" href="../../site_testing/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../../site_testing/reveal.js/css/theme/white.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>First
+        <div class='left' style="float:left;" data-markdown>
+          <script type="text/template">
+            ### Test 1
+          </script>
+        </div>
+        <div class='right' style="float:right">
+          Test 2
+        </div>
+      </section>
+      <section data-markdown>
+        <script type="text/template">
+        # header of slide
+
+* Slides
+    * Header
+        * header of slide
+    * SSC
+        * Single Section Content
+    * MSCV
+        * Multi Section Content Verticle
+    * MSCH
+        * Multi Section Content Horizontal
+* TN
+    * teacher notes
+
+
+          ```
+
+
+
+        </script>
+      </section>
+    </div>
+  </div>
+  <script src="../../site_testing/reveal.js/lib/js/head.min.js"></script>
+  <script src="../../site_testing/reveal.js/js/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        { src: '../../site_testing/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '../../site_testing/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../../site_testing/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../../site_testing/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '../../site_testing/reveal.js/plugin/zoom-js/zoom.js', async: true },
+        { src: '../../site_testing/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+    });
+  </script>
+</body>
+</html>

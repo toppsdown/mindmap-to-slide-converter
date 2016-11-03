@@ -1,0 +1,41 @@
+section{
+  border: 1px solid #000000 !important;
+  height: 700px;
+  width: 960px;
+}
+
+div.content{
+  font-size: 32px;
+  line-height: 40px;
+  height: 85%;
+  padding: 30px;
+}
+
+div.horizontal > div {
+  max-height: 50%;
+  margin-bottom: 30px;
+}
+
+div.vertical > div {
+  margin-right: 30px;
+  height: 100%;
+  display: inline-block;
+}
+
+div.header{
+  border-bottom: 1px solid #000000;
+  font-size: 48px;
+  height: 15%;
+}
+
+pre {
+  white-space: pre-line;
+  margin: 0 10px !important;
+}
+
+code {
+  background-color: #b5b5b5;
+  padding: 10px !important;
+  line-height: 50px !important;
+}
+

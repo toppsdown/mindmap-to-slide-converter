@@ -1,0 +1,56 @@
+<html>
+<head>
+  <link rel="stylesheet" href="../../site_testing/reveal.js/css/reveal.css">
+  <!-- <link rel="stylesheet" href="reveal.js/css/theme/white.css"> -->
+  <link rel="stylesheet" href="../assets/css/slide_types.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <div class='header'>SSC: Single Section Slide</div>
+        <div class='content'>This is some content</div>
+      </section>
+      <section>
+        <div class='header'>MSCH: Slide with columns</div>
+        <div class='content vertical'>
+          <div>Section 1</div>
+          <div>Section 2</div>
+          <div>Section 3</div>
+        </div>
+      </section>
+      <section>
+        <div class='header'>MSCV: Slide with rows</div>
+        <div class='content horizontal'>
+          <div>Section 1</div>
+          <div>Section 2</div>
+          <div>Section 3</div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="../../site_testing/reveal.js/lib/js/head.min.js"></script>
+  <script src="../../site_testing/reveal.js/js/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        { src: '../../site_testing/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '../../site_testing/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../../site_testing/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../../site_testing/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '../../site_testing/reveal.js/plugin/zoom-js/zoom.js', async: true },
+        { src: '../../site_testing/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+    });
+  </script>
+</body>
+</html>

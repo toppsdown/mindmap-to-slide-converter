@@ -5,9 +5,10 @@
       - slide.contents.each do |content|
         %div
           %pre=content
-  %section
-    .header="#{slide.header}: Teacher Notes"
-    .content
-      - slide.teacher_notes.each do |tn|
-        %pre=tn
+  - unless slide.teacher_notes.empty?
+    %section
+      .header="#{slide.header}: Teacher Notes"
+      .content
+        - slide.teacher_notes.each do |tn|
+          %pre=tn
 

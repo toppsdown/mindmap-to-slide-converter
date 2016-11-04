@@ -3,11 +3,10 @@ require 'haml'
 require 'pry'
 
 ROOT_DIR = '../../'
-CONVERTER_DIR = File.join(ROOT_DIR, 'mind_map_converter')
-CSS_DIR = File.join(CONVERTER_DIR, 'assets', 'css')
-
-SITE_TESTING_DIR = File.join(ROOT_DIR, 'site_testing')
-REVEAL_JS_DIR = File.join(SITE_TESTING_DIR, 'reveal.js')
+CONVERTER_DIR = File.join('../')
+ASSETS_DIR = File.join(CONVERTER_DIR, 'assets')
+CSS_DIR = File.join(ASSETS_DIR, 'css')
+REVEAL_JS_DIR = File.join(ASSETS_DIR, 'reveal.js')
 
 # http://stackoverflow.com/questions/6125265/using-layouts-in-haml-files-independently-of-rails
 module HamlSupport

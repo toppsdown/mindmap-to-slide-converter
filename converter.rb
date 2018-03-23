@@ -2,11 +2,18 @@ require 'nokogiri'
 require 'haml'
 require 'pry'
 
-ROOT_DIR = '../../'
-CONVERTER_DIR = File.join('../')
-ASSETS_DIR = File.join(CONVERTER_DIR, 'assets')
-CSS_DIR = File.join(ASSETS_DIR, 'css')
-REVEAL_JS_DIR = File.join(ASSETS_DIR, 'reveal.js')
+
+# Relative View Paths
+class Views
+  ROOT_DIR = '../../'
+  CONVERTER_DIR = '../'  # relative
+  ASSETS_DIR = File.join(CONVERTER_DIR, 'assets')
+  CSS_DIR = File.join(ASSETS_DIR, 'css')
+  REVEAL_JS_DIR = File.join(ASSETS_DIR, 'reveal.js')
+end
+
+# Relative Code Paths
+CONTENT_SOURCE_DIR = File.join('./', 'test')
 
 # http://stackoverflow.com/questions/6125265/using-layouts-in-haml-files-independently-of-rails
 module HamlSupport
@@ -50,7 +57,7 @@ class SlideDeck < Struct.new(:path)
     # Go through each slide node and extract the contents
 
     # KEYS: Header, SSC, MSCV, MSCH, TN
-    headers_xml = @doc.search('node[TEXT=Header]')
+    headers_xml = @doc.search('node[@TEXT=Header]')
     slides_xml = headers_xml.map(&:parent)
 
     slides_xml.each do |slide_xml|
@@ -75,25 +82,31 @@ class Slide < Struct.new(:header, :type, :contents, :teacher_notes)
   SUPPORTED_TYPES = ['ssc', 'mscv', 'msch']
 
   def self.create_from_xml(slide_xml)
-    slide = Slide.new
+    begin
+      slide = Slide.new
 
-    header_xml = slide_xml.search('.//node[@TEXT="Header"]').first.search('.//node').first
-    slide.header = header_xml.attribute('TEXT').text
+      header_xml = slide_xml.search('.//node[@TEXT="Header"]').first.search('.//node').first
+      slide.header = header_xml.attribute('TEXT').text
 
-    content_xml = slide_xml.search(".//node[@TEXT='MSCH' or @TEXT='SSC' or @TEXT='MSCV']")
-    unless content_xml.empty?
-      slide.type = content_xml.attribute('TEXT').text.downcase
+      content_xml = slide_xml.search(".//node[@TEXT='MSCH' or @TEXT='SSC' or @TEXT='MSCV']")
+      unless content_xml.empty?
+        slide.type = content_xml.attribute('TEXT').text.downcase
 
-      content_xml.search(".//node").each do |content|
-        slide.contents << content.attribute('TEXT').text
+        content_xml.search(".//node").each do |content|
+          slide.contents << content.attribute('TEXT').text
+        end
       end
-    end
 
-    teacher_notes_xml = slide_xml.search(".//node[@TEXT='TN']")
-    unless teacher_notes_xml.empty?
-      teacher_notes_xml.search('.//node').each do |note|
-        slide.teacher_notes << note.attribute('TEXT').text
+      teacher_notes_xml = slide_xml.search(".//node[@TEXT='TN']")
+      unless teacher_notes_xml.empty?
+        teacher_notes_xml.search('.//node').each do |note|
+          slide.teacher_notes << note.attribute('TEXT').text
+        end
       end
+
+    rescue StandardError => ex
+      binding.pry
+
     end
 
     slide
@@ -121,7 +134,8 @@ class Slide < Struct.new(:header, :type, :contents, :teacher_notes)
 end
 
 
-sd = SlideDeck.new('./test/Week_1.mm')
+
+sd = SlideDeck.new(File.join(CONTENT_SOURCE_DIR, 'Week_2.mm'))
 sd.parse_slides!
 sd.render_to_file
 

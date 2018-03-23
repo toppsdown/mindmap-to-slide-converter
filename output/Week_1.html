@@ -1,24 +1,467 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href='../../site_testing/reveal.js/css/reveal.css' rel='stylesheet' type='text/css'>
-    <link href='../../site_testing/slide_types.css' rel='stylesheet' type='text/css'>
+    <link href='../assets/reveal.js/css/reveal.css' rel='stylesheet' type='text/css'>
+    <link href='../assets/css/slide_types.css' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class='reveal'>
       <div class='slides'>
-        <section>
-          <div class='header'>header</div>
-          <div class='content vertical'>
-            <div>C1</div>
-            <div>C2</div>
-          </div>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Week 1</div>
+            <div class='content'>
+              <pre>Intro to programming with Ruby</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>What are we learning today?</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>1) Problem solving framework</pre>
+              </div>
+              <div>
+                <pre>2) Data Types</pre>
+              </div>
+              <div>
+                <pre>2.1) Arrays&#x000A;2.2) Strings&#x000A;2.3) Booleans&#x000A;2.4) Conditionals</pre>
+              </div>
+              <div>
+                <pre>3) Abstraction</pre>
+              </div>
+              <div>
+                <pre>3.1) Variables&#x000A;3.2) Loops&#x000A;3.3) Functions</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>What is programming?</div>
+            <div class='content'>
+              <pre>Teaching computers to solve problems</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>What is programming?: Teacher Notes</div>
+            <div class='content'>
+              <pre>Teaching computers to solve problems</pre>
+              <pre>imagine the computer is a child</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>How do we program?</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>1) Understand the problem</pre>
+              </div>
+              <div>
+                <pre>2) Break the problem down into thousands of pieces</pre>
+              </div>
+              <div>
+                <pre>3) Teach the computer how to solve each tiny piece</pre>
+              </div>
+              <div>
+                <pre>4) Tell the computer to solve each piece in order</pre>
+              </div>
+              <div>
+                <pre>5) Computer now knows how to solve the problem!</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Why is Programming hard?</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>1) Computers are dumb</pre>
+              </div>
+              <div>
+                <pre>2) Computers can only do ONE thing at a time</pre>
+              </div>
+              <div>
+                <pre>3) Computers need every tiny piece spelled out for them</pre>
+              </div>
+              <div>
+                <pre>4) Computers don't speak english</pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Why is Programming hard?: Teacher Notes</div>
+            <div class='content'>
+              <pre>Computers do not have intelligence, they will follow our instructions exactly</pre>
+              <pre>When we talk to each other, we have a common context by which we communicate.  Our language is full of ambiguities so we have to make assumptions about what the other speaker means.  Computers do not make assumptions</pre>
+              <pre>Human language is imprecise.  Computer language is not</pre>
+              <pre>The hard part of programming is not learning the language, it's being able to critically analyze all the contexts that we take for granted when we communicate to each other</pre>
+              <pre>One of the most important things to remember is that COMPUTERS CAN ONLY DO ONE THING AT A TIME</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise: How to make a PBJ Sandwich</div>
+            <div class='content'>
+              <pre>Spend 1 minute writing out the instructions for how to make a PBJ sandwich</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise: Teach me to make a PBJ Sandwich</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Teacher will be the computer</pre>
+              </div>
+              <div>
+                <pre>Your words will be the program the teacher follows</pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Exercise: Teach me to make a PBJ Sandwich: Teacher Notes</div>
+            <div class='content'>
+              <pre>Teacher acts like a computer and only does things literally</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise: Conclusions</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>1) Computers are literal&#x000A;2) Computers can only do one thing at a time</pre>
+              </div>
+              <div>
+                <pre>How do we start to think like a computer?</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Scary word alert: Algorithm</div>
+            <div class='content'>
+              <pre>An algorithm is a set of instructions for how to solve a problem</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise: Check for ingredients</div>
+            <div class='content'>
+              <pre>Let's break down the process of checking for ingredients</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Exercise: Check for ingredients: Teacher Notes</div>
+            <div class='content'>
+              <pre>1) Define required ingredients</pre>
+              <pre>2) Define current inventory of ingredients</pre>
+              <pre>3) check each item in required ingredients against each item in inventory of ingredients</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>REPL.it: File</div>
+            <div class='content'>
+              <pre>We can write all our code here</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>REPL.it: File: Teacher Notes</div>
+            <div class='content'>
+              <pre>We write our code in the file side.  We can save our work here</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>REPL.it: Interactive session</div>
+            <div class='content'>
+              <pre>The interactive session loads our code and lets us play with it</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>REPL.it: Interactive session: Teacher Notes</div>
+            <div class='content'>
+              <pre>The interactive session does not get saved.  When we click "Run" all the code in our file side is run and loaded into the interactive session</pre>
+              <pre>The last thing executed in our file will be returned in the interactive session</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise A: 1) Define required ingredients</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Create a list of required ingredients in Repl.IT</pre>
+              </div>
+              <div>
+                <pre>Topics:</pre>
+              </div>
+              <div>
+                <pre>Arrays: https://github.com/toppy42/rampup-ruby/blob/master/explanations/array.md</pre>
+              </div>
+              <div>
+                <pre>Strings: https://github.com/toppy42/rampup-ruby/blob/master/explanations/string.md</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise A: 3) Compare ingredients to inventory</div>
+            <div class='content'>
+              <pre>What are the steps for comparing the ingredients and inventory?</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Exercise A: 3) Compare ingredients to inventory: Teacher Notes</div>
+            <div class='content'>
+              <pre>See code exercise notes</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise A: 3) Compare ingredients to inventory</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Topics:</pre>
+              </div>
+              <div>
+                <pre>Array Indexes</pre>
+              </div>
+              <div>
+                <pre>Booleans: https://github.com/toppy42/rampup-ruby/blob/master/explanations/boolean.md</pre>
+              </div>
+              <div>
+                <pre>Boolean Comparisons</pre>
+              </div>
+              <div>
+                <pre>Boolean Operators</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Cleanup your code with abstraction</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>What is abstraction?: Abstraction is when we make something less literal</pre>
+              </div>
+              <div>
+                <pre>When we name a person, the name is an abstraction of that person</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise A:  4) Abstract with Variables</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>What if our inventory list changed?</pre>
+              </div>
+              <div>
+                <pre>1) Use variables to avoid repeating our inventory list</pre>
+              </div>
+              <div>
+                <pre>2) Use variables to save the output of our boolean comparisons</pre>
+              </div>
+              <div>
+                <pre>https://github.com/toppy42/rampup-ruby/blob/master/explanations/variable.md</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise A: 5) Check all ingredients</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Use boolean operator (&&) to answer the question: Do we have all the necessary ingredients?</pre>
+              </div>
+              <div>
+                <pre>Set inventory to: <code>['peanut butter', 'bread', 'jelly']</code>.  What happens?</pre>
+              </div>
+              <div>
+                <pre>Set inventory to: <code>['peanut butter', 'pickles', 'jelly']</code>.  What happens?</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Problem solving framework</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>1) Define the problem&#x000A;2) List the subproblems&#x000A;3) Solve/Recurse</pre>
+              </div>
+              <div>
+                <pre>We will continue to use this framework to start thinking like computers</pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Problem solving framework: Teacher Notes</div>
+            <div class='content'>
+              <pre>So how do we start to think like a computer?</pre>
+              <pre>A lot of the problems we think about doing are actually lots of little problems put together</pre>
+              <pre>Because computers can only do one thing at a time, we need to break down our problems as small as possible</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Scary word alert: Recursion</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Recursion: Repeating the same process with a smaller part of the original problem</pre>
+              </div>
+              <div>
+                <pre>We stop recursing when the problem is simple enough to solve</pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Scary word alert: Recursion: Teacher Notes</div>
+            <div class='content'>
+              <pre>What I mean by recursion here in our framework is that we will use the same framework on each of the subproblems until they are simple enough that we know how to tell the computer how to do them</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Debugging a problem</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>What does this code return?  What should it return?</pre>
+              </div>
+              <div>
+                <pre><code>['bread', 'peanut butter'][0] =='bread' || &#x000A;['bread', 'peanut butter'][1] =='bread' && &#x000A;['bread', 'peanut butter'][0] =='jelly' || &#x000A;['bread', 'peanut butter'][1] =='jelly'</code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Precedence: The order of operations</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>https://github.com/toppy42/rampup-ruby/blob/master/explanations/precedence.md</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise B: Showing Precedence</div>
+            <div class='content'>
+              <pre>Using the precedence table in that link, let's walk through all steps the computer takes when executing that code</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Control Flow</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Telling a computer how to make decisions</pre>
+              </div>
+              <div>
+                <pre>https://github.com/toppy42/rampup-ruby/blob/master/explanations/control_flow.md</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise C: Control Flow</div>
+            <div class='content'>
+              <pre>Let's check our inventory and tell the user whether they have all the ingredients or if they need to go to the store</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise D: Abstract with a while loop</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Loops are how we tell the computer to do something multiple times</pre>
+              </div>
+              <div>
+                <pre>https://github.com/toppy42/rampup-ruby/blob/master/explanations/loop.md</pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Exercise D: Abstract with a while loop: Teacher Notes</div>
+            <div class='content'>
+              <pre>In our current code, we are repeating the same check</pre>
+              <pre>what's the difference between the checks?</pre>
+              <pre>the index</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise D: Abstract with loops</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>How can we use a while loop to clean this up?</pre>
+              </div>
+              <div>
+                <pre>What happens to this code if we add another item to the inventory?</pre>
+              </div>
+              <div>
+                <pre><code>&#x000A;inventory[0] == 'peanut butter' ||&#x000A;inventory[1] == 'peanut butter' ||&#x000A;inventory[2] == 'peanut butter'&#x000A;</code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Abstraction: Functions</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Functions allow us to give a name to code</pre>
+              </div>
+              <div>
+                <pre>We can then call that name to execute the code anywhere we want</pre>
+              </div>
+              <div>
+                <pre>https://github.com/toppy42/rampup-ruby/blob/master/explanations/function.md</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise E: Abstract with Functions</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>1) Write a function that checks the inventory array for peanut butter</pre>
+              </div>
+              <div>
+                <pre>2) Write a function that takes any item and inventory list and checks if it is in the inventory</pre>
+              </div>
+            </div>
+          </section>
         </section>
       </div>
     </div>
   </body>
-  <script src='../../site_testing/reveal.js/lib/js/head.min.js'></script>
-  <script src='../../site_testing/reveal.js/js/reveal.js'></script>
+  <script src='../assets/reveal.js/lib/js/head.min.js'></script>
+  <script src='../assets/reveal.js/js/reveal.js'></script>
 </html>
 <script>
   Reveal.initialize({
@@ -31,12 +474,12 @@
   
     // More info https://github.com/hakimel/reveal.js#dependencies
     dependencies: [
-      { src: '../../site_testing/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      { src: '../../site_testing/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: '../../site_testing/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: '../../site_testing/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-      { src: '../../site_testing/reveal.js/plugin/zoom-js/zoom.js', async: true },
-      { src: '../../site_testing/reveal.js/plugin/notes/notes.js', async: true }
+      { src: '../assets/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../assets/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../assets/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../assets/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../assets/reveal.js/plugin/zoom-js/zoom.js', async: true },
+      { src: '../assets/reveal.js/plugin/notes/notes.js', async: true }
       ]
     });
 </script>

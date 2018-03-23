@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='../assets/reveal.js/css/reveal.css' rel='stylesheet' type='text/css'>
+    <!-- <link href='../../site_testing/DEPRECATE_reveal.js/css/theme/ethan.css' rel='stylesheet' type='text/css' id="theme"> -->
+    <link href='../assets/css/slide_types.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class='reveal'>
+      <div class='slides'>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Header of slide</div>
+            <div class='content'>
+              <pre>Single Section Content</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>What is programming?</div>
+            <div class='content'>
+              <pre>Teaching computers to solve problems</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>What is programming?: Teacher Notes</div>
+            <div class='content'>
+              <pre>Teaching computers to solve problems</pre>
+              <pre>imagine the computer is a child</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Why is Programming hard?</div>
+            <div class='content'>
+              <pre>1) Computers are dumb&#x000A;2) They only know what we teach them&#x000A;3) They can only do one thing at a time&#x000A;4) They don't understand human language</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Why is Programming hard?: Teacher Notes</div>
+            <div class='content'>
+              <pre>Computers do not have intelligence, they will follow our instructions exactly</pre>
+              <pre>When we talk to each other, we have a common context by which we communicate.  Our language is full of ambiguities so we have to make assumptions about what the other speaker means.  Computers do not make assumptions</pre>
+              <pre>Human language is imprecise.  Computer language is not</pre>
+              <pre>The hard part of programming is not learning the language, it's being able to critically analyze all the contexts that we take for granted when we communicate to each other</pre>
+              <pre>One of the most important things to remember is that COMPUTERS CAN ONLY DO ONE THING AT A TIME</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Problem solving framework</div>
+            <div class='content'>
+              <pre>1) Define the problem&#x000A;2) List the subproblems&#x000A;3) Solve/Recurse</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Problem solving framework: Teacher Notes</div>
+            <div class='content'>
+              <pre>So how do we start to think like a computer?</pre>
+              <pre>A lot of the problems we think about doing are actually lots of little problems put together</pre>
+              <pre>Because computers can only do one thing at a time, we need to break down our problems as small as possible</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Scary word alert: Recursion</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Recursion means repeating the same process with smaller piece of the original problem</pre>
+              </div>
+              <div>
+                <pre>We stop recursing when the problem is simple enough to solve</pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Scary word alert: Recursion: Teacher Notes</div>
+            <div class='content'>
+              <pre>What I mean by recursion here in our framework is that we will use the same framework on each of the subproblems until they are simple enough that we know how to tell the computer how to do them</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Problem solving framework</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>So our framework really looks like this:</pre>
+              </div>
+              <div>
+                <pre>1) Define the problem&#x000A;2) List the subproblems&#x000A;&#x000A;- if one subproblem:&#x000A;  3) solve&#x000A;&#x000A;- if multiple subproblems&#x000A;  3.1) recurse on subproblems&#x000A;  3.2) combine subsolutions</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise: Make a peanut butter and jelly sandwich</div>
+            <div class='content'>
+              <pre>Picture of PBJ</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Exercise: Make a peanut butter and jelly sandwich: Teacher Notes</div>
+            <div class='content'>
+              <pre>Everyone take a minute to write down the instructions for how to make a peanut butter and jelly sandwich</pre>
+              <pre>wait a minute</pre>
+              <pre>have people compare their answers to show that depending on how much detail you want to go into, there's actually a lot of steps for making a PBJ</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise: Use framework to make a PBJ</div>
+            <div class='content'>
+              <pre>1) Define the problem&#x000A;2) List the subproblems&#x000A;&#x000A;- if one subproblem:&#x000A;  3) solve&#x000A;&#x000A;- if multiple subproblems&#x000A;  3.1) recurse on subproblems&#x000A;  3.2) combine subsolutions</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Exercise: Use framework to make a PBJ: Teacher Notes</div>
+            <div class='content'>
+              <pre>Go through the first round of subproblems as a class</pre>
+              <pre>Should wind up as something like</pre>
+              <pre>1) Gather ingredients &#x000A;2) Put peanut butter on a slice of bread &#x000A;3) Put jelly on another slice of bread &#x000A;4) Put pieces together</pre>
+              <pre>Pair up with neighbor for 5 minutes to come up with more detailed instructions</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Scary word alert: Algorithm</div>
+            <div class='content'>
+              <pre>An algorithm is a set of instructions for how to solve a problem</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Scary word alert: Algorithm: Teacher Notes</div>
+            <div class='content'>
+              <pre>You just wrote an algorithm for how to make a PBJ sandwich</pre>
+              <pre>We're going to start coding, but first we need to learn about our coding environment</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>REPL.it: File</div>
+            <div class='content'>
+              <pre>We can write all our code here</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>REPL.it: File: Teacher Notes</div>
+            <div class='content'>
+              <pre>We write our code in the file side.  We can save our work here</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>REPL.it: Interactive session</div>
+            <div class='content'>
+              <pre>The interactive session loads our code and lets us play with it</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>REPL.it: Interactive session: Teacher Notes</div>
+            <div class='content'>
+              <pre>The interactive session does not get saved.  When we click "Run" all the code in our file side is run and loaded into the interactive session</pre>
+              <pre>The last thing executed in our file will be returned in the interactive session</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Group Exercise: Your first program</div>
+            <div class='content'>
+              <pre>Do we have all the right ingredients for a PBJ?</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Group Exercise: Your first program: Teacher Notes</div>
+            <div class='content'>
+              <pre>Let's write a program that checks if we have all the ingredients we need in order to make a PBJ sandwich</pre>
+              <pre>everyone should open REPL.IT</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise: Check for ingredients</div>
+            <div class='content'>
+              <pre>1) Define the problem&#x000A;2) List the subproblems&#x000A;3) Solve/Recurse</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Exercise: Check for ingredients: Teacher Notes</div>
+            <div class='content'>
+              <pre>as a group, walk through the framework until we need arrays</pre>
+              <pre>should look like</pre>
+              <pre>1) Check if we have necessary ingredients&#x000A;  1.1) Define current inventory of ingredients&#x000A;    solve:&#x000A;  1.2) Check if inventory includes peanut butter&#x000A;  1.3) Check if inventory includes jelly&#x000A;  1.4) Check if inventory includes bread</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>What is an Array?</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>An Array is how we store a list in the computer</pre>
+              </div>
+              <div>
+                <pre>To create an array:&#x000A;  - Use square brackets: []&#x000A;  - Separate items with commas</pre>
+              </div>
+              <div>
+                <pre><code>[ 'peanut butter', 'jelly', 'bread' ]</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>What is an Array?: Teacher Notes</div>
+            <div class='content'>
+              <pre>explain the terms element/item</pre>
+              <pre>Try it out in repl.it</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>What is an Array?</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>To add new items to an array, use the shovel operator</pre>
+              </div>
+              <div>
+                <pre><code> array = [1,2,3] </code></pre>
+              </div>
+              <div>
+                <pre><code> array << 4 </code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>What is a String?</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>A string is what we call text.  To a computer, text is a "string of characters"</pre>
+              </div>
+              <div>
+                <pre>To create a string:&#x000A;  - Write text between quotations: 'hello', "goodbye"&#x000A;  - For now, we're only going to use single quotes</pre>
+              </div>
+              <div>
+                <pre><code>'peanut butter'</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>What is a String?: Teacher Notes</div>
+            <div class='content'>
+              <pre>try writing a string in REPL.IT</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Listing our inventory</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Store our list of ingredients as an "Array of Strings"</pre>
+              </div>
+              <div>
+                <pre><code>[ 'peanut butter', 'jelly', 'bread' ]</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Listing our inventory: Teacher Notes</div>
+            <div class='content'>
+              <pre>1) Check if we have necessary ingredients&#x000A;  1.1) Define current inventory of ingredients&#x000A;    solve: <code>[ 'peanut butter', 'jelly', 'bread' ]</code>&#x000A;  1.2) Check if inventory includes peanut butter&#x000A;  1.3) Check if inventory includes jelly&#x000A;  1.4) Check if inventory includes bread</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Checking if we have peanut butter</div>
+            <div class='content'>
+              <pre></pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Checking if we have peanut butter: Teacher Notes</div>
+            <div class='content'>
+              <pre>1.2) Check if inventory includes peanut butter&#x000A;    1.2.1) Check if first item is peanut butter&#x000A;      1.2.1.1) Get first item in inventory&#x000A;        solve:&#x000A;      1.2.1.2) Compare to peanut butter&#x000A;        solve:&#x000A;    1.2.2) Check if second item is peanut butter&#x000A;    1.2.3) Check if third item is peanut butter</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Checking if we have peanut butter</div>
+            <div class='content'>
+              <pre>1) Get first item (we need array indexes)&#x000A;2) Compare against PB (we need boolean comparisons)</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Array Indexes</div>
+            <div class='content vertical'>
+              <div>
+                <pre>Human list&#x000A;1) Peanut Butter&#x000A;2) Jelly&#x000A;3) Bread</pre>
+              </div>
+              <div>
+                <pre>Computer List&#x000A;0) Peanut Butter&#x000A;1) Jelly&#x000A;2) Bread</pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Array Indexes: Teacher Notes</div>
+            <div class='content'>
+              <pre>explain 0 indexing</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Array Indexes</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>To access an item at a specific index, we use square brackets</pre>
+              </div>
+              <div>
+                <pre><code>[ 'peanut butter', 'jelly', 'bread'][0]</code></pre>
+              </div>
+              <div>
+                <pre>returns <code>'peanut butter'</code></pre>
+              </div>
+              <div>
+                <pre>What does <code>[ 'peanut butter', 'jelly', 'bread'][2]</code> return?</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>What's a Boolean?</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>A Boolean is how a computer represents "true" and "false"</pre>
+              </div>
+              <div>
+                <pre><code>true</code></pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Boolean comparison</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>A boolean comparison is anything that compares two things and returns true or false</pre>
+              </div>
+              <div>
+                <pre>- equals: <code>==</code>&#x000A;- not equals: <code>!=</code>&#x000A;- inequality: <code>></code>&#x000A;- inequality: <code><=</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Boolean comparison: Teacher Notes</div>
+            <div class='content'>
+              <pre>Students should play around with boolean comparisons in REPL.IT</pre>
+              <pre>Let's combine these two pieces to check if the first item is peanut butter</pre>
+              <pre>Now let's pop up a level</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Checking if we have peanut butter</div>
+            <div class='content'>
+              <pre>1) Compare first item to peanut butter&#x000A;2) Compare second item to peanut butter&#x000A;3) Compare third item to peanut butter</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Checking if we have peanut butter: Teacher Notes</div>
+            <div class='content'>
+              <pre>we can now check all the indexes in the array, but we need to combine them</pre>
+              <pre>In english, how would we combine them to answer the question of "do we have peanut butter"</pre>
+              <pre>the OR</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Boolean operators</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Boolean operators are what we use to combine multiple boolean expressions</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Boolean operators (OR, ||)</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>When we have multiple expressions, and only need one to be true, we use the "OR" operator <code>||</code></pre>
+              </div>
+              <div>
+                <pre>ex. <code>true || false </code> returns <code>true</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Boolean operators (OR, ||): Teacher Notes</div>
+            <div class='content'>
+              <pre>teach them "pipe" and "double pipe"</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Boolean operators (AND, &&)</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>When we have multiple expressions, and all need to be true, we use the "AND" operator <code>&&</code></pre>
+              </div>
+              <div>
+                <pre>ex. <code>true && false </code> returns <code>false</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Boolean operators (AND, &&): Teacher Notes</div>
+            <div class='content'>
+              <pre>teach them "amp" and "double amp"</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>WARNING</div>
+            <div class='content'>
+              <pre>Ruby also has "and" and "or" words in it.  DO NOT USE THESE.  They are not the same as "&&" and "||"</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Checking if we have peanut butter</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Let's complete this now</pre>
+              </div>
+              <div>
+                <pre>1) Compare first item to peanut butter&#x000A;2) Compare second item to peanut butter&#x000A;3) Compare third item to peanut butter</pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Checking if we have peanut butter: Teacher Notes</div>
+            <div class='content'>
+              <pre><code>['peanut butter', 'jelly', 'bread' ][0] == 'peanut butter' ||&#x000A;['peanut butter', 'jelly', 'bread' ][1] == 'peanut butter' ||&#x000A;['peanut butter', 'jelly', 'bread' ][2] == 'peanut butter'</code></pre>
+              <pre>Now let's pop up and solve all the subproblems and combine them</pre>
+              <pre>Walk them through combining things with the &&</pre>
+              <pre>But theres a problem!</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Control Flow</div>
+            <div class='content'>
+              <pre>Telling a computer how to make decisions</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Control Flow: Teacher Notes</div>
+            <div class='content'>
+              <pre>Now that we know how to evaluate conditionals, we can use those conditionals to teach the computer how to make decisions</pre>
+              <pre>This is called control flow</pre>
+              <pre>It's very similar to a flow chart</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Control Flow</div>
+            <div class='content'>
+              <pre></pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Control Flow: Teacher Notes</div>
+            <div class='content'>
+              <pre>Create an example flow chart for what we want to demonstrate</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Control Flow: Conditionals</div>
+            <div class='content'>
+              <pre><code>if some condition&#x000A;  do something&#x000A;else &#x000A;  do something else&#x000A;end</code></pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Control Flow: Conditionals: Teacher Notes</div>
+            <div class='content'>
+              <pre>Convert the flow chart in previous slide into ruby</pre>
+              <pre>Teach puts</pre>
+              <pre>put string</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Debugging an Error</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>What does this return?</pre>
+              </div>
+              <div>
+                <pre><code>['bread', 'peanut butter'][0] =='bread' || &#x000A;['bread', 'peanut butter'][1] =='bread' && &#x000A;['bread', 'peanut butter'][0] =='jelly' || &#x000A;['bread', 'peanut butter'][1] =='jelly'</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Debugging an Error: Teacher Notes</div>
+            <div class='content'>
+              <pre>let them type it all into repl.it</pre>
+              <pre>Debug with them by going through what the computer is doing</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Precedence</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Remember that a computer can only do one thing at a time.  Precedence how it chooses the order of things to do</pre>
+              </div>
+              <div>
+                <pre>Precedence table: https://www.techotopia.com/index.php/Ruby_Operator_Precedence</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Fix the precedence</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>We can fix this precedence error by using parentheses</pre>
+              </div>
+              <div>
+                <pre><code>ingredients = ['bread', 'peanut butter']&#x000A;&#x000A;(['bread', 'peanut butter'][0] =='bread' ||&#x000A;['bread', 'peanut butter'][1] =='bread') &&&#x000A;(['bread', 'peanut butter'][0] =='jelly' || &#x000A;['bread', 'peanut butter'][1] =='jelly')</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Fix the precedence: Teacher Notes</div>
+            <div class='content'>
+              <pre>Have students fix their code by adding parenthesis</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Coding Framework v2</div>
+            <div class='content'>
+              <pre>1) Define the problem&#x000A;2) List the subproblems&#x000A;3) Solve/Recurse&#x000A;4) Abstract and clean up</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Coding Framework v2: Teacher Notes</div>
+            <div class='content'>
+              <pre>Looking at our code, we can see that it's really messy</pre>
+              <pre>Where do you think we can clean up?</pre>
+              <pre>To prompt them, ask what happens if we want to change our required ingredients, or our inventory?</pre>
+              <pre>1) we have to repeat the inventory array</pre>
+              <pre>2) We have to repeat our required ingredients</pre>
+              <pre>3) If we add items to the array, we need to compare more indexes</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>What is abstraction?</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Abstraction is when we make something less literal</pre>
+              </div>
+              <div>
+                <pre>When we name a person, the name is an abstraction of that person</pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>What is abstraction?: Teacher Notes</div>
+            <div class='content'>
+              <pre>One type of abstraction is a name: "Tim"; is a person. We use the name "Tim" as an abstraction of the person Tim. That way, when I want to tell you about Tim, I can just say his name instead of going and getting Tim and pointing at him while I talk</pre>
+              <pre>So too can we refer to things in our code using names</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>What's a Variable?</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>A variable is a name that references something</pre>
+              </div>
+              <div>
+                <pre>Example:</pre>
+              </div>
+              <div>
+                <pre><code>ingredients = [ 'peanut butter', 'jelly', 'bread' ]</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>What's a Variable?: Teacher Notes</div>
+            <div class='content'>
+              <pre>Now instead of writing our list over and over again, we can just use the name "ingredients"</pre>
+              <pre>This process is called DRYing your code</pre>
+              <pre>Don't repeat yourself</pre>
+              <pre>The goal of DRYing code is to make it as easy as possible to change it in the future</pre>
+              <pre>Don't DRY until the abstraction step.  Get your program working with duplication, and then DRY it up later</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise:  DRY up our code</div>
+            <div class='content'>
+              <pre>use a variable to replace all definitions of the ingredient inventory</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Exercise:  DRY up our code: Teacher Notes</div>
+            <div class='content'>
+              <pre>Now if we want to edit our inventory list, we only have to change it in one place</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Abstraction: Loops</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Loops are how we tell the computer to do something multiple times</pre>
+              </div>
+              <div>
+                <pre><code>ingredients[0] == 'peanut butter' ||&#x000A;ingredients[1] == 'peanut butter' ||&#x000A;ingredients[2] == 'peanut butter'</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Abstraction: Loops: Teacher Notes</div>
+            <div class='content'>
+              <pre>In our current code, we are repeating the same check</pre>
+              <pre>what's the difference between the checks?</pre>
+              <pre>the index</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Loops: While loop</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>The while loop is one type of loop that runs until a specific condition is no longer met</pre>
+              </div>
+              <div>
+                <pre class='code-block'>
+                  <code class='indent-1'>x = 0</code>
+                  <code class='indent-1'>while x < 5</code>
+                  <code class='indent-2'>puts 'Still Looping'</code>
+                  <code class='indent-3'>puts x</code>
+                  <code class='indent-4'>x = x + 1</code>
+                  <code class='indent-5'>end</code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Loops: While loop: Teacher Notes</div>
+            <div class='content'>
+              <pre>While loops allow us to repeat something until some condition is no longer true</pre>
+              <pre>Let's walk through the steps the computer is doing in the above loop</pre>
+              <pre>How can we use a while loop to abstract our repetition above?</pre>
+              <pre>just use the number for now, not the length method</pre>
+              <pre>Let's go through all our code and replace everything with while loops</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Abstraction: Functions</div>
+            <div class='content horizontal'>
+              <div>
+                <pre><code>def function_name&#x000A;  do a thing here&#x000A;end</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Abstraction: Functions: Teacher Notes</div>
+            <div class='content'>
+              <pre>They allow us to package a bunch of code together</pre>
+              <pre>Have the students define a function that prints out their names.  Show them they can now use it multiple times in the script side of REPL or in the interactive side</pre>
+              <pre>Everything in ruby has functions already applied to them</pre>
+              <pre>What if we don't know the length of our array?</pre>
+              <pre>Length function/method is a method that exists on the Array.  We don't have to create it ourselves because the creators of Ruby already wrote that function for us</pre>
+              <pre>Replace our static length with this method</pre>
+              <pre>Note that the words method/function are used interchangeably.  There is a difference, but not in ruby.  Don't worry about it</pre>
+              <pre>Anything created in the function does not exist outside of the function</pre>
+              <pre>scope</pre>
+              <pre>potentially for week two</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Functions: Arguments</div>
+            <div class='content'>
+              <pre><code>def function_name(argument)&#x000A;  do a thing here with the argument&#x000A;end</code></pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Functions: Arguments: Teacher Notes</div>
+            <div class='content'>
+              <pre>Functions can take arguments or parameters</pre>
+              <pre>These are kinda like variables, but we don't tell the function what the value of the variable is until we call it</pre>
+              <pre>Tell students to define a function that takes a number and tells us if the value is greater than or less than 5</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Functions: Return Values</div>
+            <div class='content'>
+              <pre><code>def function_name&#x000A;  return something&#x000A;end</code></pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Functions: Return Values: Teacher Notes</div>
+            <div class='content'>
+              <pre>A function will return a value and we can use this value in our code</pre>
+              <pre>write a function that returns the number 5 and save it to a variable</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Functions: Methods</div>
+            <div class='content'>
+              <pre>['array', 'of', 'things'].length</pre>
+            </div>
+          </section>
+          <section>
+            <div class='header'>Functions: Methods: Teacher Notes</div>
+            <div class='content'>
+              <pre>If we imagine code as a language, then functions are the verbs</pre>
+              <pre>They are the doing actions</pre>
+              <pre>Objects are the nouns, but we'll talk about objects later on.  In this case, our noun is the array, and we are using the 'length' verb, which does a count of how many things there are in the array, and then gives us the value of that count</pre>
+              <pre>tim.run, is a function that tells tim to start running</pre>
+              <pre>tim.eat(sandwich)</pre>
+              <pre>tim is the noun</pre>
+              <pre>object</pre>
+              <pre>eat is the verb</pre>
+              <pre>function</pre>
+              <pre>sandwich is the noun that the verb is acting on</pre>
+              <pre>argument</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Abstraction: Functions</div>
+            <div class='content'>
+              <pre>Generalize the while loops above into a function</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Problem solving framework</div>
+            <div class='content'>
+              <pre>1) Define the problem&#x000A;2) List the subproblems&#x000A;3) Solve/Recurse&#x000A;4) Abstract</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Data Types</div>
+            <div class='content'>
+              <pre>Arrays: Lists</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Control Flow</div>
+            <div class='content'>
+              <pre><code>if condition&#x000A;  then something happens&#x000A;elsif other_condition&#x000A;  then something else happens&#x000A;else&#x000A;  then the default happens&#x000A;end</code></pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Abstraction</div>
+            <div class='content'>
+              <pre>Variables</pre>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+  </body>
+  <script src='../assets/reveal.js/lib/js/head.min.js'></script>
+  <script src='../assets/reveal.js/js/reveal.js'></script>
+</html>
+<script>
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      { src: '../assets/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../assets/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../assets/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../assets/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../assets/reveal.js/plugin/zoom-js/zoom.js', async: true },
+      { src: '../assets/reveal.js/plugin/notes/notes.js', async: true }
+      ]
+    });
+</script>

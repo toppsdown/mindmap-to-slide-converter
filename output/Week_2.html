@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='../assets/reveal.js/css/reveal.css' rel='stylesheet' type='text/css'>
+    <link href='../assets/css/slide_types.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class='reveal'>
+      <div class='slides'>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Week 2</div>
+            <div class='content'>
+              <pre>Intro to programming with Ruby</pre>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>What are we learning today?</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>1) Review Homework</pre>
+              </div>
+              <div>
+                <pre>2) Review concepts from last week</pre>
+              </div>
+              <div>
+                <pre>3) Abstraction</pre>
+              </div>
+              <div>
+                <pre>Functions</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Abstraction: Functions</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>Functions allow us to give a name to code</pre>
+              </div>
+              <div>
+                <pre>We can then call that name to execute the code anywhere we want</pre>
+              </div>
+              <div>
+                <pre>https://github.com/toppy42/rampup-ruby/blob/master/explanations/function.md</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class='main-section'>
+          <section>
+            <div class='header'>Exercise A: Abstract with Functions</div>
+            <div class='content horizontal'>
+              <div>
+                <pre>1) Write a function that checks the inventory array for peanut butter</pre>
+              </div>
+              <div>
+                <pre>2) Write a function that takes any item and inventory list and checks if it is in the inventory</pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        
+      </div>
+    </div>
+  </body>
+  <script src='../assets/reveal.js/lib/js/head.min.js'></script>
+  <script src='../assets/reveal.js/js/reveal.js'></script>
+</html>
+<script>
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+  
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+  
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      { src: '../assets/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../assets/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../assets/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../assets/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../assets/reveal.js/plugin/zoom-js/zoom.js', async: true },
+      { src: '../assets/reveal.js/plugin/notes/notes.js', async: true }
+      ]
+    });
+</script>

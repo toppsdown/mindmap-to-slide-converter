@@ -1,13 +1,13 @@
 !!!
 %html
   %head
-    %link{ rel: "stylesheet", href: "#{REVEAL_JS_DIR}/css/reveal.css", type: 'text/css' }
-    %link{ rel: "stylesheet", href: "#{CSS_DIR}/slide_types.css", type: 'text/css' }
+    %link{ rel: "stylesheet", href: "#{Views::REVEAL_JS_DIR}/css/reveal.css", type: 'text/css' }
+    %link{ rel: "stylesheet", href: "#{Views::CSS_DIR}/slide_types.css", type: 'text/css' }
   %body
     = yield
 
-  %script{ src: "#{REVEAL_JS_DIR}/lib/js/head.min.js" }
-  %script{ src: "#{REVEAL_JS_DIR}/js/reveal.js" }
+  %script{ src: "#{Views::REVEAL_JS_DIR}/lib/js/head.min.js" }
+  %script{ src: "#{Views::REVEAL_JS_DIR}/js/reveal.js" }
 
 :javascript
   Reveal.initialize({
@@ -20,11 +20,11 @@
 
     // More info https://github.com/hakimel/reveal.js#dependencies
     dependencies: [
-      { src: '#{REVEAL_JS_DIR}/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      { src: '#{REVEAL_JS_DIR}/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: '#{REVEAL_JS_DIR}/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: '#{REVEAL_JS_DIR}/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-      { src: '#{REVEAL_JS_DIR}/plugin/zoom-js/zoom.js', async: true },
-      { src: '#{REVEAL_JS_DIR}/plugin/notes/notes.js', async: true }
+      { src: '#{Views::REVEAL_JS_DIR}/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '#{Views::REVEAL_JS_DIR}/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '#{Views::REVEAL_JS_DIR}/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '#{Views::REVEAL_JS_DIR}/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '#{Views::REVEAL_JS_DIR}/plugin/zoom-js/zoom.js', async: true },
+      { src: '#{Views::REVEAL_JS_DIR}/plugin/notes/notes.js', async: true }
       ]
     });
